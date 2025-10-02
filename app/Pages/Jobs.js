@@ -1,11 +1,11 @@
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import { Job, Customer } from "@/entities/all";
 import { Button } from "@/components/ui/button";
 import { Plus } from "lucide-react";
 import { Tabs, TabsList, TabsTrigger } from "@/components/ui/tabs";
 
-import JobList from "../components/jobs/JobList";
-import JobDialog from "../components/jobs/JobDialog";
+import JobList from "../Components/jobs/JobList.js";
+import JobDialog from "../Components/jobs/JobDialog.js";
 
 export default function Jobs() {
   const [jobs, setJobs] = useState([]);

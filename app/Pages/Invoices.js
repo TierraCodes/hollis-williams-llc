@@ -1,11 +1,11 @@
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import { Invoice, Customer, Job } from "@/entities/all";
 import { Button } from "@/components/ui/button";
 import { Plus } from "lucide-react";
 import { Tabs, TabsList, TabsTrigger } from "@/components/ui/tabs";
 
-import InvoiceList from "../components/invoices/InvoiceList";
-import InvoiceDialog from "../components/invoices/InvoiceDialog";
+import InvoiceList from "../Components/invoices/InvoiceList.js";
+import InvoiceDialog from "../Components/invoices/InvoiceDialog.js";
 
 export default function Invoices() {
   const [invoices, setInvoices] = useState([]);

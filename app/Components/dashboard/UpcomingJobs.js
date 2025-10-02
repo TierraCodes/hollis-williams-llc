@@ -14,24 +14,8 @@ const serviceColors = {
   other: "bg-gray-100 text-gray-800 border-gray-200",
 };
 
-type ServiceType = "mowing" | "trimming" | "mulching" | "leaf_removal" | "other";
-
-type Job = {
-  id: string | number;
-  customer_name: string;
-  service_address: string;
-  service_type: ServiceType;
-  scheduled_date: string;
-  estimated_duration?: number;
-};
-
-interface UpcomingJobsProps {
-  jobs: Job[];
-  loading: boolean;
-}
-
-export default function UpcomingJobs({ jobs, loading }: UpcomingJobsProps) {
-  const getDateLabel = (dateString: string) => {
+export default function UpcomingJobs({ jobs, loading }) {
+  const getDateLabel = (dateString) => {
     const date = parseISO(dateString);
     if (isToday(date)) return "Today";
     if (isTomorrow(date)) return "Tomorrow";
@@ -63,9 +47,9 @@ export default function UpcomingJobs({ jobs, loading }: UpcomingJobsProps) {
           </div>
         ) : (
           <div className="space-y-4">
-                  <Badge className={`${serviceColors[job.service_type as ServiceType] || serviceColors.other} border font-medium`}>
-                    {job.service_type?.replace(/_/g, ' ')}
-                  </Badge>
+            {jobs.map((job, index) => (
+              <motion.div
+                key={job.id}
                 initial={{ opacity: 0, x: -20 }}
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ delay: index * 0.1 }}

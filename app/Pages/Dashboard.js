@@ -1,13 +1,13 @@
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import { Customer, Job, Invoice } from "@/entities/all";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Users, Briefcase, DollarSign, Calendar, TrendingUp, Clock } from "lucide-react";
 import { format, isToday, isTomorrow, parseISO } from "date-fns";
 
-import StatsCard from "../components/dashboard/StatsCard";
-import UpcomingJobs from "../Components/dashboard/UpcomingJobs.tsx/index.ts";
-import RecentCustomers from "../components/dashboard/RecentCustomers";
-import RevenueChart from "../Components/dashboard/RevenueChart";
+import StatsCard from "../Components/dashboard/StatsCard.js";
+import UpcomingJobs from "../Components/dashboard/UpcomingJobs.js";
+import RecentCustomers from "../Components/dashboard/RecentCustomers.js/index.js";
+import RevenueChart from "../Components/dashboard/RevenueChart.tsx";
 
 export default function Dashboard() {
   const [customers, setCustomers] = useState([]);

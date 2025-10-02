@@ -1,4 +1,3 @@
-import React from "react";
 import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card";
 import { Users, Phone, MapPin } from "lucide-react";
 import { Skeleton } from "@/components/ui/skeleton";

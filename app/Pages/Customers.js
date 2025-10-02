@@ -1,11 +1,11 @@
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import { Customer } from "@/entities/Customer";
 import { Button } from "@/components/ui/button";
 import { Plus, Search } from "lucide-react";
 import { Input } from "@/components/ui/input";
 
-import CustomerList from "../components/customers/CustomerList";
-import CustomerDialog from "../components/customers/CustomerDialog";
+import CustomerList from "../Components/customers/CustomerList.js";
+import CustomerDialog from "../Components/customers/CustomerDialog.js/index.js";
 
 export default function Customers() {
   const [customers, setCustomers] = useState([]);
